@@ -1,0 +1,156 @@
+{% extends 'base/base.html' %} 
+{% load static %}
+{% block content %}
+
+<div class="row nav-row trans-menu">
+    <div class="container nav-container">
+        <div class="top-navbar">
+            <div class="pull-right">
+                <div class="top-nav-social pull-left">
+                    <a href="https://www.kletech.ac.in/"><i class="fa fa-globe"></i></a>
+                    <a href="https://twitter.com/kletechbvb?lang=en"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/school/kletechbvb/"><i class="fa fa-linkedin"></i></a>
+                </div>
+
+                <!--<div class="top-navbar-search pull-right">
+							<i class="fa fa-search"></i>
+							<input type = "text" placeholder = "Search"/>
+						</div>-->
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+        <nav id="weberaNavbar" class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#weberaNavbarCollapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+                <a class="navbar-brand" href="index.html">WEBERA</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="weberaNavbarCollapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url 'accounts:homepage' %}"><i class="fa fa-home"></i>HOME</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i
+								class="fa fa-graduation-cap"></i>ACADEMICS <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'accounts:learnpage' %}"><i class="fa fa-certificate"></i>LEARN</a></li>
+                            <li><a href="{% url 'accounts:readpage' %}"><i class="fa fa-search"></i>READ</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="{% url 'accounts:eventpage' %}" data-toggle="dropdown" class="dropdown-toggle"><i
+								class="fa fa-calendar-check-o"></i>EVENTS <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'accounts:eventpage' %}"><i class="fa fa-calendar"></i>WEB DEV EVENTS</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i
+								class="fa fa-dashboard"></i>DASHBOARD <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="dashboard/admin-dashboard.html"><i class="fa fa-user-secret"></i>ADMIN</a></li>
+                            <li><a href="dashboard/teacher-dashboard.html"><i class="fa fa-user"></i>TEACHER</a></li>
+                            <li><a href="dashboard/student-dashboard.html"><i class="fa fa-child"></i>STUDENT</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-file"></i>PAGES <b
+								class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'accounts:gallerypage' %}"><i class="fa fa-picture-o"></i>WEB DEV GALLERY</a></li>
+                            <li><a href="{% url 'accounts:aboutpage' %}"><i class="fa fa-info-circle"></i>ABOUT</a></li>
+                            <li><a href="{% url 'accounts:contactpage' %}"><i class="fa fa-phone-square"></i>CONTACT US</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+    </div>
+</div>
+
+<div class="row">
+    <div id="homeSlider" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="{% static 'img/slider/events.jpg' %}" alt="slide1">
+                <div class="carousel-caption">
+                    <h1><i class="fa fa-star-o"></i>WEB DEV: EVENTS IN CAMPUS<i class="fa fa-star-o"></i>
+                    </h1>
+                    <!-- <h2> THE HOTSPOT FOR LEARNING </h2> -->
+                    <p> <strong>Hop in to test and showcase your best foot forward in Web development</strong> </p>
+                    <a href="{% url 'accounts:homepage' %}"><i class="fa fa-paper-plane"></i>KNOW MORE</a>
+                </div>
+            </div>
+
+        
+</div>
+
+<div class="row section-row">
+    <div class="container">
+        <div class="section-row-header-center">
+            <h6><i class="fa fa-star-o"></i>Let's fuel up Learning together<i class="fa fa-star-o"></i></h6>
+            <h1>WEB TECH EVENTS</h1>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="news-item-container">
+                <div class="news-img">
+                    <img src="{% static './img/fullstack.jpg' %}" alt="news" />
+                    <div class="news-item-date">
+                        <h6><i class="fa fa-calendar"></i>11, June 2021</h6>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <h5>Full Stack Web Development</h5>
+                    <p>Come One, Come All,It's time to build some mind boggling Web Apps, which are never seen before. Showcase your web art to the world. It's now or never. Don't forget to bring your A Game on </p>
+                    <a href="#"><i class="fa fa-paper-plane"></i>Click to Register</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="news-item-container">
+                <div class="news-img">
+                    <img src="{% static './img/mean1.jpg' %}" alt="news" />
+                    <div class="news-item-date">
+                        <h6><i class="fa fa-calendar"></i>11, July 2021</h6>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <h5>Workshop on Mean Stack</h5>
+                    <p>It's an era that has turned digital throughout, Now is the time, that we have, to learn and explore the field of web sev right from scratch. Come one, come all. Let's master web Development in the most trending technology together. Hurry up! limited seats Available.
+                    </p>
+                    <a href="#"><i class="fa fa-paper-plane"></i>Click to Register</a>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix visible-sm-block"></div>
+        <div class="col-sm-6 col-md-4">
+            <div class="news-item-container">
+                <div class="news-img">
+                    <img src="{% static './img/django1.png' %}" alt="news" />
+                    <div class="news-item-date">
+                        <h6><i class="fa fa-calendar"></i>21, July 2021</h6>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <h5>Web Development with Django: Workshop</h5>
+                    <p>Mastered Python? How about mastering web development with python. With the most easy, and very fast and agile framework, You'll ow be able to impress everyone around with your mind boggling skills. Join us to explore web development with django. Don't Miss out!</p>
+                    <a href="#"><i class="fa fa-paper-plane"></i>Click here to register</a>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix visible-lg visible-md visible-sm"></div>
+        
+    </div>
+</div>
+
+{% endblock %}

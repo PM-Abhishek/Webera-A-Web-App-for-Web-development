@@ -1,0 +1,303 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row nav-row trans-menu">
+    <div class="container nav-container">
+        <div class="top-navbar">
+            <div class="pull-right">
+                <div class="top-nav-social pull-left">
+                    <a href="https://www.kletech.ac.in/"><i class="fa fa-globe"></i></a>
+                    <a href="https://twitter.com/kletechbvb?lang=en"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/school/kletechbvb/"><i class="fa fa-linkedin"></i></a>
+                </div>
+
+                <!--<div class="top-navbar-search pull-right">
+							<i class="fa fa-search"></i>
+							<input type = "text" placeholder = "Search"/>
+						</div>-->
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+        <nav id="weberaNavbar" class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#weberaNavbarCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">WEBERA</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="weberaNavbarCollapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url 'accounts:homepage' %}"><i class="fa fa-home"></i>HOME</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i
+                                class="fa fa-graduation-cap"></i>ACADEMICS <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'accounts:learnpage' %}"><i class="fa fa-certificate"></i>LEARN</a></li>
+                            <li><a href="{% url 'accounts:readpage' %}"><i class="fa fa-search"></i>READ</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="{% url 'accounts:eventpage' %}" data-toggle="dropdown" class="dropdown-toggle"><i
+                                class="fa fa-calendar-check-o"></i>EVENTS <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'accounts:eventpage' %}"><i class="fa fa-calendar"></i>WEB DEV
+                                    EVENTS</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i
+                                class="fa fa-dashboard"></i>DASHBOARD <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="dashboard/admin-dashboard.html"><i class="fa fa-user-secret"></i>ADMIN</a></li>
+                            <li><a href="dashboard/teacher-dashboard.html"><i class="fa fa-user"></i>TEACHER</a></li>
+                            <li><a href="dashboard/student-dashboard.html"><i class="fa fa-child"></i>STUDENT</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-file"></i>PAGES <b
+                                class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'accounts:gallerypage' %}"><i class="fa fa-picture-o"></i>WEB DEV
+                                    GALLERY</a></li>
+                            <li><a href="{% url 'accounts:aboutpage' %}"><i class="fa fa-info-circle"></i>ABOUT</a></li>
+                            <li><a href="{% url 'accounts:contactpage' %}"><i class="fa fa-phone-square"></i>CONTACT
+                                    US</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+    </div>
+</div>
+
+<div class="row">
+    <div id="homeSlider" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="{% static 'img/slider/learn.jpg' %}" alt="slide1">
+                <div class="carousel-caption">
+                    <h1><i class="fa fa-star-o"></i>THE HOTSPOT FOR LEARNING<i class="fa fa-star-o"></i>
+                    </h1>
+                    <!-- <h2> THE HOTSPOT FOR LEARNING </h2> -->
+                    <p> <strong>Learn the most exotic happening's in Web Development</strong> </p>
+                    <a target="_blank"
+                        href="https://www.google.com/search?q=latest+trends+in+web+development&safe=active&sxsrf=ALeKk03UD8xUL6TKWK5Ltj7HPhAc1B3dwg%3A1623064599862&ei=FwC-YMGBNIGfmgeblpSIDA&oq=latest+trends+in+web+development&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyAggAMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeMgYIABAIEB46BwgjELADECc6BwgAEEcQsAM6BggAEAcQHjoECAAQDToICAAQCBAHEB46CAgAEAcQBRAeOgcIIxCwAhAnUJAUWL8oYKEvaAJwAngAgAGzAYgBgw-SAQQyLjEzmAEAoAEBqgEHZ3dzLXdpesgBCcABAQ&sclient=gws-wiz&ved=0ahUKEwiB6a_nsoXxAhWBj-YKHRsLBcEQ4dUDCA4&uact=5"><i
+                            class="fa fa-paper-plane"></i>KNOW MORE</a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row section-row">
+            <div class="container">
+                <div class="section-row-header-center">
+                    <h6><i class="fa fa-star-o"></i>Let's fuel up Learning together<i class="fa fa-star-o"></i></h6>
+                    <h1>Trending in Webtech</h1>
+                    <p>Have these armors of web tech in your pocket. Stand out from the croud!</p>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="news-item-container">
+                        <div class="news-img">
+                            <img src="{% static './img/DArkMode.gif' %}" alt="news" />
+                            <div class="news-item-date">
+                                <h6><i class="fa fa-calendar"></i>By Lambda Test</h6>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <h5>Dark Mode User Experience</h5>
+                            <p>The dark mode is one of the recent trends in web development that has gained popularity
+                                globally and is here to stay. Having a dark themed site makes it easier for the user to
+                                enjoy the web irrespective of any device.</p>
+                            <a target="_blank"
+                                href="https://www.lambdatest.com/blog/top-21-web-development-trends-in-2021/"><i
+                                    class="fa fa-paper-plane"></i>VIEW DETAILS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="news-item-container">
+                        <div class="news-img">
+                            <img src="{% static './img/voiceUI.gif' %}" alt="news" />
+                            <div class="news-item-date">
+                                <h6><i class="fa fa-calendar"></i>By Shawn Lawton Henry</h6>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <h5>More Accessibility with Voice UI</h5>
+                            <p>Since W3C introduced the accessibility standards and guidelines, web developers have
+                                aimed to develop a website that anyone can access, even by hearing and sight-impaired
+                                audiences.In the last few years, we have witnessed a growth in the usage of voice
+                                recognition
+                                technology and smart speakers developed by Amazon, Apple, or Google.</p>
+                            <a target="_blank" href="https://www.w3.org/WAI/standards-guidelines/"><i
+                                    class="fa fa-paper-plane"></i>VIEW DETAILS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix visible-sm-block"></div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="news-item-container">
+                        <div class="news-img">
+                            <img src="{% static './img/amp.gif' %}" alt="news" />
+                            <div class="news-item-date">
+                                <h6><i class="fa fa-calendar"></i>By Google</h6>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <h5>Accelerated Mobile Pages (AMP)</h5>
+                            <p>We live in a world of users that are very fond of instant gratification, if not
+                                completely hooked on it. So how does that translate into mobile solutions? It’s very
+                                simple, a sluggish mobile site will substantially limit your business, because whenever
+                                a webpage doesn’t load quickly enough, you easily lose visitors. </p>
+                            <a target="_blank" href="https://amp.dev/"><i class="fa fa-paper-plane"></i>VIEW DETAILS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix visible-lg visible-md visible-sm"></div>
+
+            </div>
+        </div>
+
+        <div class="row section-row">
+            <div class="container">
+                <div class="col-sm-6 col-md-4">
+                    <div class="news-item-container">
+                        <div class="news-img">
+                            <img src="{% static './img/pwa.gif' %}" alt="news" />
+                            <div class="news-item-date">
+                                <h6><i class="fa fa-calendar"></i>By Ritesh Shetty</h6>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <h5>Progressive Web Apps (PWA).</h5>
+                            <p>In 2019, 65% of online shopping orders through the website were made with mobile devices.
+                                PWA’s rising website trend makes it possible for users to view their favorite websites
+                                on a mobile web browser or desktop and without downloading
+                                special apps or computer programs.</p>
+                            <a target="_blank"
+                                href="https://www.lambdatest.com/blog/progressive-web-apps-and-the-future-of-mobile-web/"><i
+                                    class="fa fa-paper-plane"></i>VIEW DETAILS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="news-item-container">
+                        <div class="news-img">
+                            <img src="{% static './img/arvr.gif' %}" alt="news" />
+                            <div class="news-item-date">
+                                <h6><i class="fa fa-calendar"></i>By Spatial.io</h6>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <h5>User Experience with Augmented Reality and Virtual Reality</h5>
+                            <p>With augmented and virtual reality in websites, the web development game has entirely
+                                changed. As per research, the industry of mixed reality will grow beyond $9.982 billion
+                                by 2024.</p>
+                            <a target="_blank" href="https://spatial.io/"><i class="fa fa-paper-plane"></i>VIEW
+                                DETAILS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix visible-sm-block"></div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="news-item-container">
+                        <div class="news-img">
+                            <img src="{% static './img/mfd.gif' %}" alt="news" />
+                            <div class="news-item-date">
+                                <h6><i class="fa fa-calendar"></i>By Reshu Rathi</h6>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <h5>Mobile-First Development</h5>
+                            <p>If you think having a mobile-first development approach is pointless, you need to rework
+                                your strategy. The reason being, user experience has always been the most crucial aspect
+                                for businesses to retain customers. 74% of the customers will return to your website if
+                                it’s mobile optimised.</p>
+                            <a target="_blank" href="https://www.lambdatest.com/blog/mobile-first-web-design/"><i
+                                    class="fa fa-paper-plane"></i>VIEW DETAILS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix visible-lg visible-md visible-sm"></div>
+
+            </div>
+        </div>
+
+        <div class="row section-row">
+            <div class="container">
+                <div class="col-sm-6 col-md-4">
+                    <div class="news-item-container">
+                        <div class="news-img">
+                            <img src="{% static './img/aipcb.gif' %}" alt="news" />
+                            <div class="news-item-date">
+                                <h6><i class="fa fa-calendar"></i>By Ubisend</h6>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <h5>Use of AI-Powered Chatbots</h5>
+                            <p>Organisations are already adopting Artificial Intelligence in varied departments to
+                                improve efficiency. However, customer service is one area where AI-powered conversations
+                                can be very beneficial.</p>
+                            <a target="_blank" href="https://blog.ubisend.com/optimise-chatbots/ai-powered-chatbot"><i
+                                    class="fa fa-paper-plane"></i>VIEW DETAILS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="news-item-container">
+                        <div class="news-img">
+                            <img src="{% static './img/spw.gif' %}" alt="news" />
+                            <div class="news-item-date">
+                                <h6><i class="fa fa-calendar"></i>By Arnab Roy Chowdhury</h6>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <h5>Single Page Websites</h5>
+                            <p>In 2021, we predict that Angular, React, and Vue will maintain their place in web
+                                development trends this year. The reason being, with time, they have evolved and can
+                                tackle all the challenges of single-page web development.
+                            </p>
+                            <a target="_blank"
+                                href="https://www.lambdatest.com/blog/6-questions-to-ask-before-developing-a-single-page-website/"><i
+                                    class="fa fa-paper-plane"></i>VIEW DETAILS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix visible-sm-block"></div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="news-item-container">
+                        <div class="news-img">
+                            <img src="{% static './img/automation.gif' %}" alt="news" />
+                            <div class="news-item-date">
+                                <h6><i class="fa fa-calendar"></i>By Himanshu Sheth</h6>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <h5>Selenium Automation Testing On Cloud</h5>
+                            <p>A web development process can only be successful if it’s thoroughly tested and validated
+                                for cross browser compatibility. Not everybody uses the same browser to access the
+                                internet. You might have a distributed target audience accessing the website through
+                                different web browsers.</p>
+                            <a target="_blank" href="https://www.lambdatest.com/blog/cloud-selenium-testing/"><i
+                                    class="fa fa-paper-plane"></i>VIEW DETAILS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix visible-lg visible-md visible-sm"></div>
+
+            </div>
+        </div>
+
+        {% endblock %}

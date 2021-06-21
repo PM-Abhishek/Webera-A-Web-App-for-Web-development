@@ -1,0 +1,188 @@
+{% extends 'base/base.html' %} 
+{% load static %}
+{% block content %}
+
+<div class="row nav-row trans-menu">
+    <div class="container nav-container">
+        <div class="top-navbar">
+            <div class="pull-right">
+                <div class="top-nav-social pull-left">
+                    <a href="https://www.kletech.ac.in/"><i class="fa fa-globe"></i></a>
+                    <a href="https://twitter.com/kletechbvb?lang=en"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/school/kletechbvb/"><i class="fa fa-linkedin"></i></a>
+                </div>
+
+                <!--<div class="top-navbar-search pull-right">
+							<i class="fa fa-search"></i>
+							<input type = "text" placeholder = "Search"/>
+						</div>-->
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+        <nav id="weberaNavbar" class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#weberaNavbarCollapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+                <a class="navbar-brand" href="index.html">WEBERA</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="weberaNavbarCollapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url 'accounts:homepage' %}"><i class="fa fa-home"></i>HOME</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i
+								class="fa fa-graduation-cap"></i>ACADEMICS <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'accounts:learnpage' %}"><i class="fa fa-certificate"></i>LEARN</a></li>
+                            <li><a href="{% url 'accounts:readpage' %}"><i class="fa fa-search"></i>READ</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="{% url 'accounts:eventpage' %}" data-toggle="dropdown" class="dropdown-toggle"><i
+								class="fa fa-calendar-check-o"></i>EVENTS <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'accounts:eventpage' %}"><i class="fa fa-calendar"></i>WEB DEV EVENTS</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i
+								class="fa fa-dashboard"></i>DASHBOARD <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <!-- <li><a href="dashboard/admin-dashboard.html"><i class="fa fa-user-secret"></i>ADMIN</a></li> -->
+                            <li><a href="dashboard/teacher-dashboard.html"><i class="fa fa-user"></i>TEACHER</a></li>
+                            <li><a href="dashboard/student-dashboard.html"><i class="fa fa-child"></i>STUDENT</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-file"></i>PAGES <b
+								class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'accounts:gallerypage' %}"><i class="fa fa-picture-o"></i>WEB DEV GALLERY</a></li>
+                            <li><a href="{% url 'accounts:aboutpage' %}"><i class="fa fa-info-circle"></i>ABOUT</a></li>
+                            <li><a href="{% url 'accounts:contactpage' %}"><i class="fa fa-phone-square"></i>CONTACT US</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+    </div>
+</div>
+
+
+  <div class="row">
+    <div id="homeSlider" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img style="width: 100%;" src="{% static 'img/moon.jpg' %}" alt="slide1">
+                <div class="carousel-caption">
+                    <h1><i></i>ABOUT US<i></i></h1>
+                    <h2> Learn, Innovate and Grow!</h2>
+                    <a href="{% url 'accounts:homepage' %}"><i class="fa fa-paper-plane"></i>KNOW MORE</a>
+                </div>
+            </div>        
+</div>
+<section class="about-us py-5 " id="about-us">
+    <div class="container mt-5">
+    
+	<div class="row">
+        <div class="col-md-6">
+		    <img src="{% static 'img/about-us.gif' %}"alt="">
+		</div>
+		<div class="col-md-6"> <br>
+		    <h1 style="color: #009DDC;">Welcome!</h1> <br>
+		    <h2>Learn More about us</h2>
+		    <hr>
+		    <p>Webera is one stop destination for all your web tech needs, Be in any year, the concepts are drafted to take you from novoice to expert in a glimpse</p>
+		    <p>A Course which does suffice to your creativity, and boost your horizons is backed up by a team of amazing faculty in K.L.E Technological University.</p>
+            <hr>
+		    <button style="border-radius: 10px;
+            color: #fff;
+            background: #009DDC;
+            border: 2px solid transparent;
+            display: inline-block;
+            padding: 10px 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: all ease 0.3s;
+            -webkit-transition: all ease 0.3s;
+            -moz-transition: all ease 0.3s;
+            -ms-transition: all ease 0.3s;
+            -o-transition: all ease 0.3s;" type="button" class="btn btn-primary">Let's Know More</button>
+
+		</div>
+		
+	</div>
+
+    <div class="row section-row evets-row">
+        <div class="container">
+            <div class="section-row-header-center">
+                <h1><i class="fa fa-star-o"></i>THE TEAM<i class="fa fa-star-o"></i></h1>
+                <p>The Team Behind Development</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row section-row">
+            <div class="col-sm-3 col-md-3">
+                <div class="news-item-container">
+                    <div class="news-img">
+                        <img src="{% static './img/team/abhishek.jpg' %}" alt="news" />
+                    </div>
+                    <div class="news-item">
+                        <h1>Abhishek PM</h1>
+                        <h5>Develepor</h5>
+                        <h5> Kle Technological University</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <div class="news-item-container">
+                    <div class="news-img">
+                        <img src="{% static './img/team/aditya.jpg' %}" alt="news" />
+                    </div>
+                    <div class="news-item">
+                        <h1>Aditya Girigoudar</h1>
+                        <h5>Develepor</h5>
+                        <h5> Kle Technological University</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <div class="news-item-container">
+                    <div class="news-img">
+                        <img src="{% static './img/team/abhimalya.jpg' %}" alt="news" />
+                    </div>
+                    <div class="news-item">
+                        <h1>Abhimalya Chowdhury</h1>
+                        <h5>Develepor</h5>
+                        <h5> Kle Technological University</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <div class="news-item-container">
+                    <div class="news-img">
+                        <img src="{% static './img/team/aditi.jpg' %}" alt="news" />
+                    </div>
+                    <div class="news-item">
+                        <h1>Aditi Hegde</h1>
+                        <h5>Develepor</h5>
+                        <h5> Kle Technological University</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+{% endblock %}
